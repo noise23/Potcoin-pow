@@ -1,10 +1,10 @@
 Potcoin integration/staging tree
 ================================
 
-http://www.potcoin.org
+http://www.potcoin.info
 
 Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2011-2013 Potcoin Developers
+Copyright (c) 2014-2014 Potcoin Developers
 
 What is Potcoin?
 ----------------
