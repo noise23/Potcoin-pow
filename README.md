@@ -12,14 +12,67 @@ What is Potcoin?
 Potcoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
  - 2.5 minute block targets
  - subsidy halves in 840k blocks (~4 years)
- - ~84 million total coins
+ - ~420 million total coins
 
 The rest is the same as Bitcoin.
- - 50 coins per block
+ - 420 coins per block
  - 2016 blocks to retarget difficulty
 
 For more information, as well as an immediately useable, binary version of
 the Potcoin client sofware, see http://www.potcoin.org.
+
+P2Pool Settings
+----------------
+p2pool/networks.py
+
+    potcoin=math.Object(
+            PARENT=networks.nets['potcoin'],
+            SHARE_PERIOD=10, # seconds target spacing
+            NEW_SHARE_PERIOD=10, # seconds target spacing
+            CHAIN_LENGTH=3*60*60//15, # shares
+            REAL_CHAIN_LENGTH=3*60*60//15, # shares
+            TARGET_LOOKBEHIND=5, # shares coinbase maturity
+            SPREAD=10, # blocks
+            NEW_SPREAD=10, # blocks
+            IDENTIFIER='DDD1A1D3B2F68CDD'.decode('hex'),
+            PREFIX='D2C3D4D541C11DDD'.decode('hex'),
+            P2P_PORT=8420,
+            MIN_TARGET=0,
+            MAX_TARGET=2**256//2**20 - 1,
+            PERSIST=False,
+            WORKER_PORT=9420,
+            BOOTSTRAP_ADDRS='us-east1.cryptovein.com'.split(' '),
+            ANNOUNCE_CHANNEL='#cryptovein',
+            VERSION_CHECK=lambda v: True,
+        ),
+
+
+
+p2pool/bitcoin/networks.py
+
+    potcoin=math.Object(
+            P2P_PREFIX='fbc0b6db'.decode('hex'),
+            P2P_PORT=4200,
+            ADDRESS_VERSION=55,
+            RPC_PORT=42000,
+            RPC_CHECK=defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
+                'potcoinaddress' in (yield bitcoind.rpc_help()) and
+                not (yield bitcoind.rpc_getinfo())['testnet']
+            )),
+            SUBSIDY_FUNC=lambda height: 420*100000000 >> (height + 1)//840000,
+            POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('ltc_scrypt').getPoWHash(data)),
+            BLOCK_PERIOD=40, # s
+            SYMBOL='POT',
+            CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'potcoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/potcoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.potcoin'), 'potcoin.conf'),
+            BLOCK_EXPLORER_URL_PREFIX='http://chain.potcoin.info/block/',
+            ADDRESS_EXPLORER_URL_PREFIX='http://chain.potcoin.info/address/',
+            TX_EXPLORER_URL_PREFIX='http://chain.potcoin.info/transaction/',
+            SANE_TARGET_RANGE=(2**256//1000000000 - 1, 2**256//1000 - 1),
+            DUMB_SCRYPT_DIFF=2**16,
+            DUST_THRESHOLD=1e8,
+        ),
+
+
 
 License
 -------
