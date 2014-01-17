@@ -10,7 +10,7 @@ What is Potcoin?
 ----------------
 
 Potcoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
- - 2.5 minute block targets
+ - 40 Second block targets
  - subsidy halves in 840k blocks (~4 years)
  - ~420 million total coins
  - 420 coins per block
@@ -19,7 +19,7 @@ Potcoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
  - P2P-PORT : 4200
  
 For more information, as well as an immediately useable, binary version of
-the Potcoin client sofware, see http://www.potcoin.org.
+the Potcoin client sofware, see http://www.potcoin.info.
 
 P2Pool Settings
 ----------------
