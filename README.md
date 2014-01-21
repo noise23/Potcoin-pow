@@ -27,10 +27,10 @@ p2pool/networks.py
 
     potcoin=math.Object(
             PARENT=networks.nets['potcoin'],
-            SHARE_PERIOD=5, # seconds target spacing
-            NEW_SHARE_PERIOD=5, # seconds target spacing
-            CHAIN_LENGTH=3*60*60//5, # shares
-            REAL_CHAIN_LENGTH=3*60*60//5, # shares
+            SHARE_PERIOD=15, # seconds target spacing
+            NEW_SHARE_PERIOD=15, # seconds target spacing
+            CHAIN_LENGTH=3*60*60//10, # shares
+            REAL_CHAIN_LENGTH=3*60*60//10, # shares
             TARGET_LOOKBEHIND=5, # shares coinbase maturity
             SPREAD=10, # blocks
             NEW_SPREAD=10, # blocks
