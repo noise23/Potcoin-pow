@@ -27,10 +27,10 @@ p2pool/networks.py
 
     potcoin=math.Object(
             PARENT=networks.nets['potcoin'],
-            SHARE_PERIOD=10, # seconds target spacing
-            NEW_SHARE_PERIOD=10, # seconds target spacing
-            CHAIN_LENGTH=3*60*60//15, # shares
-            REAL_CHAIN_LENGTH=3*60*60//15, # shares
+            SHARE_PERIOD=5, # seconds target spacing
+            NEW_SHARE_PERIOD=5, # seconds target spacing
+            CHAIN_LENGTH=3*60*60//5, # shares
+            REAL_CHAIN_LENGTH=3*60*60//5, # shares
             TARGET_LOOKBEHIND=5, # shares coinbase maturity
             SPREAD=10, # blocks
             NEW_SPREAD=10, # blocks
@@ -64,9 +64,9 @@ p2pool/bitcoin/networks.py
             BLOCK_PERIOD=40, # s
             SYMBOL='POT',
             CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'potcoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/potcoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.potcoin'), 'potcoin.conf'),
-            BLOCK_EXPLORER_URL_PREFIX='http://chain.potcoin.info/block/',
-            ADDRESS_EXPLORER_URL_PREFIX='http://chain.potcoin.info/address/',
-            TX_EXPLORER_URL_PREFIX='http://chain.potcoin.info/transaction/',
+            BLOCK_EXPLORER_URL_PREFIX='http://potchain.potcoin.info/block/',
+            ADDRESS_EXPLORER_URL_PREFIX='http://potchain.potcoin.info/address/',
+            TX_EXPLORER_URL_PREFIX='http://potchain.potcoin.info/transaction/',
             SANE_TARGET_RANGE=(2**256//1000000000 - 1, 2**256//1000 - 1),
             DUMB_SCRYPT_DIFF=2**16,
             DUST_THRESHOLD=1e8,
