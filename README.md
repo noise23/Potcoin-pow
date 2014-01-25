@@ -14,7 +14,7 @@ Potcoin is a lite version of Bitcoin using scrypt as a proof-of-work algorithm.
  - subsidy halves in 840k blocks (~4 years)
  - ~420 million total coins
  - 420 coins per block
- - 2016 blocks to retarget difficulty
+ - 107 blocks to retarget difficulty
  - RPC-PORT : 42000
  - P2P-PORT : 4200
  
