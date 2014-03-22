@@ -75,6 +75,25 @@ p2pool/bitcoin/networks.py
 
 
 
+Blockhain won't sync?
+---------------------
+Add the following information to your potcoin.conf file
+
+addnode=162.243.214.135
+addnode=213.95.21.24
+addnode=88.198.110.120
+addnode=91.121.85.62
+addnode=188.226.135.210
+addnode=162.243.227.221
+addnode=5.255.66.44
+addnode=23.253.70.235
+addnode=162.243.224.78
+addnode=172.245.21.210
+addnode=162.242.156.243
+addnode=209.141.39.184
+addnode=23.253.74.25
+addnode=23.21.136.204
+
 License
 -------
 
