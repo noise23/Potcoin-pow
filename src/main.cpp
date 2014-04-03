@@ -1193,24 +1193,63 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
                 if (PastBlocksMax > 0 && i > PastBlocksMax) { break; }
                 PastBlocksMass++;
 
+                /*
+diff --git a/src/main.cpp b/src/main.cpp
+index fd881d1..7687d3a 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -886,7 +886,7 @@ unsigned int static GravityWell(const CBlockIndex* pindexLast, const CBlock *pbl
+        double                          EventHorizonDeviationSlow;
+
+     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || (uint64)BlockLastSolved->nHeight < PastBlocksMin) { return bnProofOfWorkLimit.GetCompact
+-
++       int64 LatestBlockTime = BlockLastSolved->GetBlockTime();
+        for (unsigned int i = 1; BlockReading && BlockReading->nHeight > 0; i++) {
+                if (PastBlocksMax > 0 && i > PastBlocksMax) { break; }
+                PastBlocksMass++;
+@@ -895,10 +895,14 @@ unsigned int static GravityWell(const CBlockIndex* pindexLast, const CBlock *pbl
+                else            { PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / i) + PastDifficultyAvera
+                PastDifficultyAveragePrev = PastDifficultyAverage;
+
+-               PastRateActualSeconds                   = BlockLastSolved->GetBlockTime() - BlockReading->GetBlockTime();
++               if (LatestBlockTime < BlockReading->GetBlockTime()) {
++                       if (BlockReading->nHeight > XXXXX) // HARD Fork block number
++                               LatestBlockTime = BlockReading->GetBlockTime();
++               }
++               PastRateActualSeconds                   = LatestBlockTime - BlockReading->GetBlockTime();
+                PastRateTargetSeconds                   = TargetBlocksSpacingSeconds * PastBlocksMass;
+                PastRateAdjustmentRatio                 = double(1);
+-               if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
++               if (BlockReading->nHeight > XXXXX) // HARD Fork block number
++                       if (PastRateActualSeconds < 1) { PastRateActualSeconds = 1; }
++               } else {
++                       if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
++               }
+                if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0) {
+                PastRateAdjustmentRatio                 = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
+                }
+
+                */
+
+
                 if (i == 1) { PastDifficultyAverage.SetCompact(BlockReading->nBits); }
                 else { PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / i) + PastDifficultyAveragePrev; }
                 PastDifficultyAveragePrev = PastDifficultyAverage;
 
                 //PastRateActualSeconds = BlockLastSolved->GetBlockTime() - BlockReading->GetBlockTime();
 				if (LatestBlockTime < BlockReading->GetBlockTime()) {
-                       if (BlockReading->nHeight > 154420) // HARD Fork block number
+                       if (BlockReading->nHeight > 158000) // HARD Fork block number
                                LatestBlockTime = BlockReading->GetBlockTime();
                 }
                 PastRateActualSeconds                   = LatestBlockTime - BlockReading->GetBlockTime();
                 PastRateTargetSeconds = TargetBlocksSpacingSeconds * PastBlocksMass;
                 PastRateAdjustmentRatio = double(1);
                 //if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
-				if (BlockReading->nHeight > 154420) // HARD Fork block number
-                       if (PastRateActualSeconds < 1) { PastRateActualSeconds = 1; }
-	               } else {
-                       if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
-		           }
+                if (BlockReading->nHeight > 158000) // HARD Fork block number
+                        if (PastRateActualSeconds < 1) { PastRateActualSeconds = 1; }
+                        else {
+                            if (PastRateActualSeconds < 0) { PastRateActualSeconds = 0; }
+                        }
                 if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0) {
 					PastRateAdjustmentRatio = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
                 }
