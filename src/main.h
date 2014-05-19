@@ -23,6 +23,23 @@ class CAddress;
 class CInv;
 class CNode;
 
+
+#define FOUNDATION_CALCULATE ((0.02*miningReward)+nFees)
+
+#define NDIFF_START_MM 99600
+#define NDIFF_START_FFOUNDATION 99500
+#define NDIFF_START_DIGISHIELD 252199
+#define NDIFF_START_KGW 61798
+#define FOUNDATION_ADDRESS "PLtnPUvmjtVsRSvhNNHXWozWNAuodannSY"
+
+
+#define NDIFF_START_MM_TESTNET 20
+#define NDIFF_START_FFOUNDATION_TESTNET 15
+#define NDIFF_START_DIGISHIELD_TESTNET 10
+#define NDIFF_START_KGW_TESTNET 5
+#define FOUNDATION_ADDRESS_TESTNET "PLtnPUvmjtVsRSvhNNHXWozWNAuodannSY"
+
+
 struct CBlockIndexWorkComparator;
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */
