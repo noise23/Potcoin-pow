@@ -1072,15 +1072,61 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 108 * 40; // Potcoin: 3.5 days
-static const int64 nTargetSpacing = 1 * 40; // Potcoin: 2.5 minutes
+static const int64 nTargetTimespan = 4 * 60 * 60; // Potcoin: 4 hours
+static const int64 nTargetTimespanNEW = 40 ; // Potcoin: 40 seconds
+static const int64 nTargetSpacing = 1 * 40; // Potcoin: 40 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
 // minimum amount of work that could possibly be required nTime after
 // minimum work required was nBase
 //
+
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
+{
+    // Testnet has min-difficulty blocks
+    // after nTargetSpacing*2 time between blocks:
+    if (fTestNet && nTime > nTargetSpacing*2)
+        return bnProofOfWorkLimit.GetCompact();
+
+    CBigNum bnResult;
+    bnResult.SetCompact(nBase);
+    while (nTime > 0 && bnResult < bnProofOfWorkLimit)
+    {
+        if ( fTestNet ){
+            if(nBestHeight+1<NDIFF_START_DIGISHIELD_TESTNET){
+                // Maximum 400% adjustment...
+                bnResult *= 4;
+                // ... in best-case exactly 4-times-normal target time
+                nTime -= nTargetTimespan*4;
+            } else {
+                // Maximum 10% adjustment...
+                bnResult = (bnResult * 110) / 100;
+                // ... in best-case exactly 4-times-normal target time
+                nTime -= nTargetTimespanNEW*4;
+            }
+
+        }else{
+            if(nBestHeight+1<NDIFF_START_DIGISHIELD){
+                // Maximum 400% adjustment...
+                bnResult *= 4;
+                // ... in best-case exactly 4-times-normal target time
+                nTime -= nTargetTimespan*4;
+            } else {
+                // Maximum 10% adjustment...
+                bnResult = (bnResult * 110) / 100;
+                // ... in best-case exactly 4-times-normal target time
+                nTime -= nTargetTimespanNEW*4;
+            }
+        }
+    }
+    if (bnResult > bnProofOfWorkLimit)
+        bnResult = bnProofOfWorkLimit;
+    return bnResult.GetCompact();
+}
+
+
+unsigned int ComputeMinWork_old(unsigned int nBase, int64 nTime)
 {
     // Testnet has min-difficulty blocks
     // after nTargetSpacing*2 time between blocks:
@@ -1380,20 +1426,20 @@ return GetNextWorkRequired_V2(pindexLast, pblock);
 }
 
 
-unsigned int static GetNextWorkRequired_OLD(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
-{
-        int DiffMode = 1;
-        if (fTestNet) {
-                if (pindexLast->nHeight+1 >= 2237) { DiffMode = 2; }
-        }
-        else {
-                if (pindexLast->nHeight+1 >= 61798) { DiffMode = 2; }
-        }
-
-        if (DiffMode == 1) { return GetNextWorkRequired_V1(pindexLast, pblock); }
-        else if (DiffMode == 2) { return GetNextWorkRequired_V2(pindexLast, pblock); }
-        return GetNextWorkRequired_V2(pindexLast, pblock);
-}
+//unsigned int static GetNextWorkRequired_OLD(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
+//{
+//        int DiffMode = 1;
+//        if (fTestNet) {
+//                if (pindexLast->nHeight+1 >= 2237) { DiffMode = 2; }
+//        }
+//        else {
+//                if (pindexLast->nHeight+1 >= 61798) { DiffMode = 2; }
+//        }
+//
+//        if (DiffMode == 1) { return GetNextWorkRequired_V1(pindexLast, pblock); }
+//        else if (DiffMode == 2) { return GetNextWorkRequired_V2(pindexLast, pblock); }
+//        return GetNextWorkRequired_V2(pindexLast, pblock);
+//}
 
 
 
