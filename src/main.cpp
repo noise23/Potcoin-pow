@@ -1072,7 +1072,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 4 * 60 * 60; // Potcoin: 4 hours
+static const int64 nTargetTimespan = 108 * 40; // Potcoin: 3.5 days
 static const int64 nTargetTimespanNEW = 40 ; // Potcoin: 40 seconds
 static const int64 nTargetSpacing = 1 * 40; // Potcoin: 40 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
