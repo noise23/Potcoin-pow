@@ -75,6 +75,10 @@ static const int64 MAX_MONEY = 420000000 * COIN;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
 static const int COINBASE_MATURITY = 5;
+/** Coinbase maturity after block 145000 **/
+static const int COINBASE_MATURITY_NEW = 60*4;
+/** Block at which COINBASE_MATURITY_NEW comes into effect **/
+static const int COINBASE_MATURITY_SWITCH = NDIFF_START_DIGISHIELD;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */

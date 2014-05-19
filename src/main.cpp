@@ -918,11 +918,22 @@ int CMerkleTx::GetDepthInMainChain(CBlockIndex* &pindexRet) const
 }
 
 
+//int CMerkleTx::GetBlocksToMaturity() const
+//{
+//    if (!IsCoinBase())
+//        return 0;
+//    return max(0, (COINBASE_MATURITY+20) - GetDepthInMainChain());
+//}
+
 int CMerkleTx::GetBlocksToMaturity() const
 {
     if (!IsCoinBase())
         return 0;
-    return max(0, (COINBASE_MATURITY+20) - GetDepthInMainChain());
+
+    if(GetHeightInMainChain() >= COINBASE_MATURITY_SWITCH)
+        return max(0, (COINBASE_MATURITY_NEW+20) - GetDepthInMainChain());
+    else
+        return max(0, (COINBASE_MATURITY+20) - GetDepthInMainChain());
 }
 
 
