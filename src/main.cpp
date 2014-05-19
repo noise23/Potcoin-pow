@@ -892,6 +892,7 @@ void CTxMemPool::queryHashes(std::vector<uint256>& vtxid)
 
 
 
+
 int CMerkleTx::GetDepthInMainChain(CBlockIndex* &pindexRet) const
 {
     if (hashBlock == 0 || nIndex == -1)
@@ -924,6 +925,11 @@ int CMerkleTx::GetDepthInMainChain(CBlockIndex* &pindexRet) const
 //        return 0;
 //    return max(0, (COINBASE_MATURITY+20) - GetDepthInMainChain());
 //}
+
+int CMerkleTx::GetHeightInMainChain(CBlockIndex* &pindexRet) const
+{
+    return GetDepthInMainChain(pindexRet) + pindexBest->nHeight - 1;
+}
 
 int CMerkleTx::GetBlocksToMaturity() const
 {
