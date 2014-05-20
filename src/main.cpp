@@ -1083,8 +1083,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 {
     int64 nSubsidy = 420 * COIN;
 
-    // Subsidy is cut in half every 840000 blocks, which will occur approximately every 4 years
-    nSubsidy >>= (nHeight / 840000); // Potcoin: 840k blocks in ~4 years
+    // Subsidy is cut in half every 280000 blocks, which will occur approximately every 4 months
+    nSubsidy >>= (nHeight / NDIFF_START_DIGISHIELD); // Potcoin: 280k blocks in ~4 months
 
     return nSubsidy + nFees;
 }
@@ -1130,8 +1130,8 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
                 // ... in best-case exactly 4-times-normal target time
                 nTime -= nTargetTimespan*4;
             } else {
-                // Maximum 400% adjustment...
-            bnResult *= 4;
+                // Maximum 10% adjustment...
+                bnResult = (bnResult * 110) / 100;
             // ... in best-case exactly 4-times-normal target time
             nTime -= nTargetTimespan*4;
             }
