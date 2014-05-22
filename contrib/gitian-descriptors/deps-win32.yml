@@ -17,7 +17,7 @@ files:
 - "openssl-1.0.1g.tar.gz"
 - "db-4.8.30.NC.tar.gz"
 - "miniupnpc-1.6.tar.gz"
-- "zlib-1.2.6.tar.gz"
+- "zlib-1.2.8.tar.gz"
 - "libpng-1.6.8.tar.gz"
 - "qrencode-3.2.0.tar.bz2"
 script: |
@@ -68,8 +68,8 @@ script: |
   install libminiupnpc.a  $INSTALLPREFIX/lib
   cd ..
   #
-  tar xzf zlib-1.2.6.tar.gz
-  cd zlib-1.2.6
+  tar xzf zlib-1.2.8.tar.gz
+  cd zlib-1.2.8
   CROSS_PREFIX=$HOST- ./configure --prefix=$INSTALLPREFIX --static
   make
   make install
