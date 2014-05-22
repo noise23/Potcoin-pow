@@ -1,3 +1,17 @@
+0.8.6.4 changes
+=============
+- Mac and Windows Official Gitian Builds: upgrade to openssl-1.0.1g for CVE-2014-0160
+                   Linux was not vulnerable with Lucid openssl-0.9.8k
+                   Older versions were only vulnerable with rarely used RPC SSL
+- If you build from source, be sure that your openssl is patched for CVE-2014-0160.
+- Upgrade openssl, qt, miniupnpc, zlib, libpng, qrencode
+- Reduced halving to 280k blocks
+- Added Digishield at block 280k
+
+0.8.6.3 changes
+=============
+- Sorry about this one.
+
 0.8.6.2 changes
 =============
 
