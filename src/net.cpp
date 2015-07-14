@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2009-2014 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "db.h"
+#include "miner.h"
 #include "net.h"
 #include "init.h"
 #include "addrman.h"
@@ -402,7 +403,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
 void ThreadGetMyExternalIP(void* parg)
 {
     // Make this thread recognisable as the external IP detection thread
-    RenameThread("bitcoin-ext-ip");
+    RenameThread("potcoin-ext-ip");
 
     CNetAddr addrLocalHost;
     if (GetMyExternalIP(addrLocalHost))
@@ -471,9 +472,12 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest)
 
 
     /// debug print
-    printf("trying connection %s lastseen=%.1fhrs\n",
-        pszDest ? pszDest : addrConnect.ToString().c_str(),
-        pszDest ? 0 : (double)(GetAdjustedTime() - addrConnect.nTime)/3600.0);
+    if (fDebug)
+    {
+        printf("trying connection %s lastseen=%.1fhrs\n",
+            pszDest ? pszDest : addrConnect.ToString().c_str(),
+            pszDest ? 0 : (double)(GetAdjustedTime() - addrConnect.nTime)/3600.0);
+    }
 
     // Connect
     SOCKET hSocket;
@@ -641,6 +645,7 @@ bool CNode::ReceiveMsgBytes(const char *pch, unsigned int nBytes)
             handled = msg.readHeader(pch, nBytes);
         else
             handled = msg.readData(pch, nBytes);
+
 
         if (handled < 0)
                 return false;
@@ -1193,11 +1198,12 @@ void MapPort(bool)
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
     {"seedz.potcoin.info", "dnsseedz.potcoin.info"},
-	{"dns1.potcoin.info","dns1.potcoin.info"},
+    {"dns1.potcoin.info","dns1.potcoin.info"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
+    {"testnet-seed.potcoin.com", "testnet-seed.potcoin.com"},
     {NULL, NULL}
 };
 
@@ -1246,8 +1252,7 @@ void ThreadDNSAddressSeed()
 
 unsigned int pnSeed[] =
 {
-    0xA2F3D687, 0xD55F1518, 0x58C66E78, 0x5B79553E, 0xBCE287D2, 0xA2F3E3DD, 0x05FF422C, 0x17FD46EB,
-    0xA2F3E04E, 0xACF515D2, 0xA2F29CF3, 0xD18D27B8, 0x17FD4A19, 0x171588CC
+    0xc6c74b0b
 };
 
 void DumpAddresses()
@@ -1806,7 +1811,7 @@ void StartNode(boost::thread_group& threadGroup)
 bool StopNode()
 {
     printf("StopNode()\n");
-    GenerateBitcoins(false, NULL);
+    GeneratePotcoins(false, NULL);
     MapPort(false);
     nTransactionsUpdated++;
     if (semOutbound)

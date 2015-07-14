@@ -1,3 +1,7 @@
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #ifndef OVERVIEWPAGE_H
 #define OVERVIEWPAGE_H
 
@@ -29,7 +33,7 @@ public:
     void showOutOfSyncWarning(bool fShow);
 
 public slots:
-    void setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 immatureBalance);
+    void setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
 
 signals:
     void transactionClicked(const QModelIndex &index);
@@ -39,6 +43,7 @@ private:
     ClientModel *clientModel;
     WalletModel *walletModel;
     qint64 currentBalance;
+    qint64 currentStake;
     qint64 currentUnconfirmedBalance;
     qint64 currentImmatureBalance;
 

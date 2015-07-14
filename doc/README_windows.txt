@@ -1,7 +1,8 @@
-Potcoin 0.8.x BETA
+Potcoin
 
-Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2011-2013 Potcoin Developers
+Copyright (c) 2009-2015 Bitcoin Developers
+Copyright (c) 2011-2015 Litecoin Developers
+Copyright (c) 2015 Potcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in

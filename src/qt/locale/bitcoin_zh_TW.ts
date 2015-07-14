@@ -5,12 +5,12 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About Potcoin</source>
-        <translation>關於莱特幣</translation>
+        <translation>關於瑞迪幣</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;Potcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;莱特幣&lt;/b&gt;版本</translation>
+        <translation>&lt;b&gt;瑞迪幣&lt;/b&gt;版本</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -35,7 +35,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>The Potcoin developers</source>
-        <translation>莱特幣開發人員</translation>
+        <translation>瑞迪幣開發人員</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
         <source>These are your Potcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>這些是你用來收款的莱特幣位址. 你可以提供不同的位址給不同的付款人, 來追蹤是誰支付給你.</translation>
+        <translation>這些是你用來收款的瑞迪幣位址. 你可以提供不同的位址給不同的付款人, 來追蹤是誰支付給你.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -83,7 +83,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+11"/>
         <source>Sign a message to prove you own a Potcoin address</source>
-        <translation>簽署訊息是用來證明莱特幣位址是你的</translation>
+        <translation>簽署訊息是用來證明瑞迪幣位址是你的</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -108,7 +108,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-44"/>
         <source>Verify a message to ensure it was signed with a specified Potcoin address</source>
-        <translation>驗證訊息是用來確認訊息是用指定的莱特幣位址簽署的</translation>
+        <translation>驗證訊息是用來確認訊息是用指定的瑞迪幣位址簽署的</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -123,7 +123,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your Potcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>這是你用來付款的莱特幣位址. 在付錢之前, 務必要檢查金額和收款位址是否正確.</translation>
+        <translation>這是你用來付款的瑞迪幣位址. 在付錢之前, 務必要檢查金額和收款位址是否正確.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR POTCOINS&lt;/b&gt;!</source>
-        <translation>警告: 如果將錢包加密後忘記密碼, 你會&lt;b&gt;失去其中所有的莱特幣&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REDDCOINS&lt;/b&gt;!</source>
+        <translation>警告: 如果將錢包加密後忘記密碼, 你會&lt;b&gt;失去其中所有的瑞迪幣&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -276,7 +276,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-56"/>
         <source>Potcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your potcoins from being stolen by malware infecting your computer.</source>
-        <translation>莱特幣現在要關閉以完成加密程序. 請記住, 加密錢包無法完全防止入侵電腦的惡意程式偷取你的莱特幣.</translation>
+        <translation>瑞迪幣現在要關閉以完成加密程序. 請記住, 加密錢包無法完全防止入侵電腦的惡意程式偷取你的瑞迪幣.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -375,7 +375,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+4"/>
         <source>Show information about Potcoin</source>
-        <translation>顯示莱特幣相關資訊</translation>
+        <translation>顯示瑞迪幣相關資訊</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -420,12 +420,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-347"/>
         <source>Send coins to a Potcoin address</source>
-        <translation>付錢到莱特幣位址</translation>
+        <translation>付錢到瑞迪幣位址</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Modify configuration options for Potcoin</source>
-        <translation>修改莱特幣的設定選項</translation>
+        <translation>修改瑞迪幣的設定選項</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -456,7 +456,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="-165"/>
         <location line="+530"/>
         <source>Potcoin</source>
-        <translation>莱特幣</translation>
+        <translation>瑞迪幣</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -481,7 +481,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+22"/>
         <source>&amp;About Potcoin</source>
-        <translation>關於莱特幣</translation>
+        <translation>關於瑞迪幣</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -501,12 +501,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+7"/>
         <source>Sign messages with your Potcoin addresses to prove you own them</source>
-        <translation>用莱特幣位址簽署訊息來證明那是你的</translation>
+        <translation>用瑞迪幣位址簽署訊息來證明那是你的</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Verify messages to ensure they were signed with specified Potcoin addresses</source>
-        <translation>驗證訊息來確認是用指定的莱特幣位址簽署的</translation>
+        <translation>驗證訊息來確認是用指定的瑞迪幣位址簽署的</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -537,12 +537,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+47"/>
         <source>Potcoin client</source>
-        <translation>莱特幣客戶端軟體</translation>
+        <translation>瑞迪幣客戶端軟體</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
         <source>%n active connection(s) to Potcoin network</source>
-        <translation><numerusform>與莱特幣網路有 %n 個連線在使用中</numerusform></translation>
+        <translation><numerusform>與瑞迪幣網路有 %n 個連線在使用中</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -656,7 +656,7 @@ Address: %4
         <location line="-23"/>
         <location line="+23"/>
         <source>URI can not be parsed! This can be caused by an invalid Potcoin address or malformed URI parameters.</source>
-        <translation>無法解析 URI! 也許莱特幣位址無效或 URI 參數有誤.</translation>
+        <translation>無法解析 URI! 也許瑞迪幣位址無效或 URI 參數有誤.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,7 +671,7 @@ Address: %4
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
         <source>A fatal error occurred. Potcoin can no longer continue safely and will quit.</source>
-        <translation>發生了致命的錯誤. 莱特幣程式無法再繼續安全執行, 只好結束.</translation>
+        <translation>發生了致命的錯誤. 瑞迪幣程式無法再繼續安全執行, 只好結束.</translation>
     </message>
 </context>
 <context>
@@ -737,7 +737,7 @@ Address: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid Potcoin address.</source>
-        <translation>輸入的位址 &quot;%1&quot; 並不是有效的莱特幣位址.</translation>
+        <translation>輸入的位址 &quot;%1&quot; 並不是有效的瑞迪幣位址.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,7 +756,7 @@ Address: %4
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
         <source>Potcoin-Qt</source>
-        <translation>莱特幣-Qt</translation>
+        <translation>瑞迪幣-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -820,12 +820,12 @@ Address: %4
     <message>
         <location line="+31"/>
         <source>Automatically start Potcoin after logging in to the system.</source>
-        <translation>在登入系統後自動啓動莱特幣.</translation>
+        <translation>在登入系統後自動啓動瑞迪幣.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Start Potcoin on system login</source>
-        <translation>系統登入時啟動莱特幣</translation>
+        <translation>系統登入時啟動瑞迪幣</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -855,7 +855,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Connect to the Potcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>透過 SOCKS 代理伺服器連線至莱特幣網路 (比如說要透過 Tor 連線).</translation>
+        <translation>透過 SOCKS 代理伺服器連線至瑞迪幣網路 (比如說要透過 Tor 連線).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -930,7 +930,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting Potcoin.</source>
-        <translation>可以在這裡設定使用者介面的語言. 這個設定在莱特幣程式重啓後才會生效.</translation>
+        <translation>可以在這裡設定使用者介面的語言. 這個設定在瑞迪幣程式重啓後才會生效.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -945,7 +945,7 @@ Address: %4
     <message>
         <location line="+9"/>
         <source>Whether to show Potcoin addresses in the transaction list or not.</source>
-        <translation>是否要在交易列表中顯示莱特幣位址.</translation>
+        <translation>是否要在交易列表中顯示瑞迪幣位址.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -997,7 +997,7 @@ Address: %4
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting Potcoin.</source>
-        <translation>這個設定會在莱特幣程式重啓後生效.</translation>
+        <translation>這個設定會在瑞迪幣瑞迪幣程式重啓後生效.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1016,7 +1016,7 @@ Address: %4
         <location line="+50"/>
         <location line="+166"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Potcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>顯示的資訊可能是過期的. 與莱特幣網路的連線建立後, 你的錢包會自動和網路同步, 但這個步驟還沒完成.</translation>
+        <translation>顯示的資訊可能是過期的. 與瑞迪幣網路的連線建立後, 你的錢包會自動和網路同步, 但這個步驟還沒完成.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1220,7 +1220,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Show the Potcoin-Qt help message to get a list with possible Potcoin command-line options.</source>
-        <translation>顯示莱特幣-Qt的求助訊息, 來取得可用的命令列選項列表.</translation>
+        <translation>顯示瑞迪幣-Qt的求助訊息, 來取得可用的命令列選項列表.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1240,12 +1240,12 @@ Address: %4
     <message>
         <location line="-104"/>
         <source>Potcoin - Debug window</source>
-        <translation>莱特幣 - 除錯視窗</translation>
+        <translation>瑞迪幣 - 除錯視窗</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Potcoin Core</source>
-        <translation>莱特幣核心</translation>
+        <translation>瑞迪幣核心</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1255,7 +1255,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Open the Potcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>從目前的資料目錄下開啓莱特幣的除錯紀錄檔. 當紀錄檔很大時可能要花好幾秒的時間.</translation>
+        <translation>從目前的資料目錄下開啓的除錯紀錄檔. 當紀錄檔很大時可能要花好幾秒的時間.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1265,7 +1265,7 @@ Address: %4
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
         <source>Welcome to the Potcoin RPC console.</source>
-        <translation>歡迎使用莱特幣 RPC 主控台.</translation>
+        <translation>歡迎使用瑞迪幣 RPC 主控台.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1407,8 +1407,8 @@ Address: %4
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>付款的目標位址 (比如說 Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>The address to send the payment to (starts with P)</source>
+        <translation>付款的目標位址 (starts with P)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1448,8 +1448,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Potcoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>輸入莱特幣位址 (比如說 Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a Potcoin address (starts with P)</source>
+        <translation>輸入瑞迪幣位址 (starts with P)</translation>
     </message>
 </context>
 <context>
@@ -1471,8 +1471,8 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>用來簽署訊息的位址 (比如說 Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>The address to sign the message with (starts with P)</source>
+        <translation>用來簽署訊息的位址 (starts with P)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1514,7 +1514,7 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Sign the message to prove you own this Potcoin address</source>
-        <translation>簽署訊息是用來證明這個莱特幣位址是你的</translation>
+        <translation>簽署訊息是用來證明這個瑞迪幣位址是你的</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1544,13 +1544,13 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>簽署該訊息的位址 (比如說 Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>The address the message was signed with (starts with P)</source>
+        <translation>簽署該訊息的位址 (starts with P)</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Verify the message to ensure it was signed with the specified Potcoin address</source>
-        <translation>驗證訊息是用來確認訊息是用指定的莱特幣位址簽署的</translation>
+        <translation>驗證訊息是用來確認訊息是用指定的瑞迪幣位址簽署的</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Potcoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>輸入莱特幣位址 (比如說 Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a Potcoin address (starts with P)</source>
+        <translation>輸入瑞迪幣位址 (starts with P)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1576,7 +1576,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Enter Potcoin signature</source>
-        <translation>輸入莱特幣簽章</translation>
+        <translation>輸入瑞迪幣簽章</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1650,7 +1650,7 @@ Address: %4
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
         <source>The Potcoin developers</source>
-        <translation>莱特幣開發人員</translation>
+        <translation>瑞迪幣開發人員</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2188,7 +2188,7 @@ Address: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
         <source>Potcoin version</source>
-        <translation>莱特幣版本</translation>
+        <translation>瑞迪幣版本</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2245,7 +2245,7 @@ Address: %4
     <message>
         <location line="-28"/>
         <source>Listen for connections on &lt;port&gt; (default: 4200 or testnet: 14200)</source>
-        <translation>在通訊埠 &lt;port&gt; 聽候連線 (預設: 4200, 或若為測試網路: 14200)</translation>
+        <translation>在通訊埠 &lt;port&gt; 聽候連線 (預設: 45444, 或若為測試網路: 14200)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2279,8 +2279,8 @@ Address: %4
     </message>
     <message>
         <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 42000 or testnet: 42001)</source>
-        <translation>在通訊埠 &lt;port&gt; 聽候 JSON-RPC 連線 (預設: 42000, 或若為測試網路: 42001)</translation>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 42000 or testnet: 142000)</source>
+        <translation>在通訊埠 &lt;port&gt; 聽候 JSON-RPC 連線 (預設: 42000, 或若為測試網路: 142000)</translation>
     </message>
     <message>
         <location line="+37"/>
@@ -2343,7 +2343,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Cannot obtain a lock on data directory %s. Potcoin is probably already running.</source>
-        <translation>無法鎖定資料目錄 %s. 也許莱特幣已經在執行了.</translation>
+        <translation>無法鎖定資料目錄 %s. 也許瑞迪幣已經在執行了.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2388,7 +2388,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Potcoin will not work properly.</source>
-        <translation>警告: 請檢查電腦時間與日期是否正確! 莱特幣無法在時鐘不準的情況下正常運作.</translation>
+        <translation>警告: 請檢查電腦時間與日期是否正確! 瑞迪幣無法在時鐘不準的情況下正常運作.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2508,7 +2508,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>寫入莱特幣資料庫失敗</translation>
+        <translation>寫入瑞迪幣資料庫失敗</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2528,7 +2528,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>生產莱特幣 (預設值: 0)</translation>
+        <translation>生產瑞迪幣 (預設值: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2637,7 +2637,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Potcoin Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see wiki.potcoin.com for SSL setup instructions)</source>
         <translation>SSL 選項: (SSL 設定程序請見 Potcoin Wiki)</translation>
     </message>
     <message>
@@ -2840,7 +2840,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     <message>
         <location line="+93"/>
         <source>Wallet needed to be rewritten: restart Potcoin to complete</source>
-        <translation>錢包需要重寫: 請重啟莱特幣來完成</translation>
+        <translation>錢包需要重寫: 請重啟瑞迪幣來完成</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2900,7 +2900,7 @@ alertnotify=echo %%s | mail -s &quot;Potcoin Alert&quot; admin@foo.com
     <message>
         <location line="-25"/>
         <source>Unable to bind to %s on this computer. Potcoin is probably already running.</source>
-        <translation>無法和這台電腦上的 %s 繫結. 也許莱特幣已經在執行了.</translation>
+        <translation>無法和這台電腦上的 %s 繫結. 也許瑞迪幣已經在執行了.</translation>
     </message>
     <message>
         <location line="+64"/>

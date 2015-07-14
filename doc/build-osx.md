@@ -76,7 +76,7 @@ Installing the dependencies using MacPorts is very straightforward.
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:potcoin-project/potcoin.git potcoin
+        git clone git@github.com:potcoin/potcoin.git potcoin
         cd potcoin
 
 2.  Build potcoind:
@@ -99,7 +99,7 @@ Note: After you have installed the dependencies, you should check that the Brew 
 
         openssl version
 
-into Terminal. You should see OpenSSL 1.0.1e 11 Feb 2013.
+into Terminal. You should see OpenSSL 1.0.1e 11 Feb 2013 or newer version.
 
 If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
@@ -111,7 +111,7 @@ Rerunning "openssl version" should now return the correct version.
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:potcoin-project/potcoin.git potcoin
+        git clone git@github.com:potcoin/potcoin.git potcoin
         cd potcoin
 
 2.  Modify source in order to pick up the `openssl` library.
@@ -137,7 +137,7 @@ Creating a release build
 A potcoind binary is not included in the Potcoin-Qt.app bundle. You can ignore
 this section if you are building `potcoind` for your own use.
 
-If you are building `litecond` for others, your build machine should be set up
+If you are building `potcoind` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:

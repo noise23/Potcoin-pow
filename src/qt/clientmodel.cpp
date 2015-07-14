@@ -1,3 +1,7 @@
+// Copyright (c) 2011-2013 The Bitcoin developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #include "clientmodel.h"
 
 #include "guiconstants.h"
@@ -55,9 +59,9 @@ QDateTime ClientModel::getLastBlockDate() const
     if (pindexBest)
         return QDateTime::fromTime_t(pindexBest->GetBlockTime());
     else if(!isTestNet())
-        return QDateTime::fromTime_t(1231006505); // Genesis block's time
+        return QDateTime::fromTime_t(1390280400); // Genesis block's time
     else
-        return QDateTime::fromTime_t(1296688602); // Genesis block's time (testnet)
+        return QDateTime::fromTime_t(1399544585); // Genesis block's time (testnet)
 }
 
 double ClientModel::getVerificationProgress() const
